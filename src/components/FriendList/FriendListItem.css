@@ -1,7 +1,26 @@
-.online {
+.friend {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background-color: #f5f5f5;
+}
+
+.friend img {
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.friend p {
+    margin: 0;
+}
+
+.friend .online {
     color: green;
 }
 
-.offline {
+.friend .offline {
     color: red;
 }
