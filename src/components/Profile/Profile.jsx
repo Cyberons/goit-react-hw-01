@@ -1,32 +1,36 @@
 import PropTypes from 'prop-types';
+import './Profile.css'; // Import your CSS file
 
 const Profile = ({ name, tag, location, image, stats }) => {
   const { followers, views, likes } = stats;
 
   return (
-    <div>
-      <div>
+    <div className="profile-container">
+      <div className="profile-header">
         <img
           src={image}
           alt="User avatar"
+          className="profile-image"
         />
-        <p>{name}</p>
-        <p>@{tag}</p>
-        <p>{location}</p>
+        <div className="profile-info">
+          <p className="profile-name">{name}</p>
+          <p className="profile-tag">@{tag}</p>
+          <p className="profile-location">{location}</p>
+        </div>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className="profile-stats-list">
+        <li className="profile-stats-item">
+          <span className="profile-stats-label">Followers</span>
+          <span className="profile-stats-value">{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className="profile-stats-item">
+          <span className="profile-stats-label">Views</span>
+          <span className="profile-stats-value">{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className="profile-stats-item">
+          <span className="profile-stats-label">Likes</span>
+          <span className="profile-stats-value">{likes}</span>
         </li>
       </ul>
     </div>
@@ -34,7 +38,7 @@ const Profile = ({ name, tag, location, image, stats }) => {
 };
 
 Profile.propTypes = {
-  name: PropTypes.string.isRequired, // Визначення типу та обов'язковості пропсу name
+  name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
