@@ -1,6 +1,6 @@
 
-import Profile from './Profile/Profile.jsx';
-import FriendList from './FriendList/FriendList.jsx';
+import Profile from './profile/Profile.jsx';
+import FriendList from './friendist/FriendList.jsx';
 import TransactionHistory from './TransactionHistory/TransactionHistory.jsx'; // Імпортуємо компонент TransactionHistory
 import userData from "../userData.json";
 import friends from "../friends.json";
