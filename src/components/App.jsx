@@ -1,9 +1,9 @@
 
-import Profile from './profile/Profile.jsx';
-import FriendList from './friendist/FriendList.jsx';
+import Profile from './Profile/Profile.jsx';
+import FriendsList from './FriendList/FriendsList.jsx';
 import TransactionHistory from './TransactionHistory/TransactionHistory.jsx'; // Імпортуємо компонент TransactionHistory
 import userData from "../userData.json";
-import friends from "../friends.json";
+import friends from "../friends.json";  
 import transactions from "../transactions.json";
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
         image={userData.avatar}
         stats={userData.stats}
       />
-      <FriendList friends={friends} />
+      <FriendsList friends={friends} />
       <TransactionHistory items={transactions} /> {/* Передаємо дані про транзакції через пропс items */}
     </>
   );
